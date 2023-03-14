@@ -1,0 +1,45 @@
+#mes-projets-section{
+    height: 90vh;
+}
+.preview-mobile {
+    display: none;
+}
+
+#preview-img {
+    border-radius: 8px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.projet-block p {
+    margin-bottom: 1em ;
+
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em ;
+
+    border-radius: 8px;
+    background-color: grey;
+    padding: 1.2em 2em;
+}
+
+@media screen and (max-width:990px) {
+    .projet-block {
+        margin: 1em 0em;
+    }
+
+    .projet-block p {
+        margin: 1em 0em;
+    }
+
+    .preview-mobile {
+        width: 100%;
+        border-radius: 12px;
+        display: block;
+    }
+
+    #preview-img {
+        display: none;
+    }
+}

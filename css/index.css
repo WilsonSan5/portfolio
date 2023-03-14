@@ -1,86 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600&display=swap');
-*{
-    margin:0 ;
+
+* {
+    margin: 0;
     padding: 0;
     border: 1px solid red;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
     background-color: black;
 }
 
-p,a{
+p,
+a {
     color: white;
+    line-height: 1.6em;
 }
-section{
+
+section {
+    position: relative;
+    width: auto;
+    height: max-content;
+    background-color: black;
     display: flex;
     align-items: center;
-    width: auto;
-    height: 90vh;
-    background-color: black;
+    justify-content: center;
 }
 
-h1,h2,h3{
-    margin: 0em 0em 2rem 0em!important;
-
+h1,
+h2,
+h3 {
+    margin: 0em 0em 2rem 0em !important;
+    font-weight: 600 !important;
     color: white;
     text-transform: uppercase;
 }
 
+h2 {
+    font-size: 2em !important;
+}
+
 /* ---------------------HEADER ---------------------------------- */
 
-.logo{
+.logo {
     font-weight: 600;
-    margin: 0!important;
+    margin: 0 !important;
 }
-.header{
+
+.header {
     height: 8vh;
     padding: 0em 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.navbar{
+
+.navbar {
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     width: 30%;
 }
 
+
 /* --------------------- FIN HEADER ---------------------------------- */
 
-h1{
-    font-weight: 600!important;
-}
-h2{
-    font-size: 2em!important;
-}
-p{
-    line-height: 1.6em;
-}
 
-.flexbox{
-    width: 100%!important;
+
+/* ------------- MY FLEXBOX -------------- */
+.flexbox {
+    width: 100% !important;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+
 }
 
-.block{
+.space-between {
+    justify-content: space-between;
+}
+
+
+
+/* ----------------------------------------- */
+
+
+/* --------------- BOUTTONS ------------- */
+
+button {
+    margin: 0em 0.5em;
+    height: 100%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 0.5em 1em;
+    background-color: black;
+}
+
+.button-logo {
+    aspect-ratio: 1/1;
+    padding: 0.5em;
+}
+
+/* ---------------FIN BOUTTONS ------------- */
+
+
+.block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 46%;
 }
 
-button{
-    color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    padding: 0.5em 1em;
-    background-color: black;
-}
-
-#landing-img{
+#landing-img {
     border-radius: 10px;
     aspect-ratio: 16/11;
-    width: clamp(300px,100%,600px);
+    width: clamp(300px, 100%, 600px);
+    height: 100%;
     object-fit: cover;
+}
+
+#arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+
+    width: 30px;
+    transform: rotate(90deg) translate(-0%, 50%);
+}
+
+.glass-container {
+    width: 80%;
+    min-width: 380px;
+    padding: 3% clamp(1em, 7%, 5em);
+    border-radius: 12px;
+    background-color: grey;
+}
+
+.glass-container .row {
+    margin-bottom: 5em;
+}
+
+@media screen and (max-width:1000px) {
+    section {
+        align-items: baseline;
+        height: auto;
+        margin: 2em 0em;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .flexbox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #landing-img {
+        display: none;
+    }
+
+    .left-block {
+        display: none;
+    }
+
+    .block {
+        width: 100%;
+    }
 }

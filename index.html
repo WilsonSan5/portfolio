@@ -8,6 +8,8 @@
 
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/projets.css">
     <title>Wilson San</title>
 </head>
 
@@ -15,14 +17,14 @@
     <div class="header">
         <h2 class="logo">WS</h2>
         <div class="navbar">
+            <a href="#mes-compétences-section">Qui suis-je ?</a>
             <a href="#">Mes projets</a>
-            <a href="#">Qui suis-je ?</a>
             <a href="#">Contact</a>
         </div>
     </div>
-    <section id="landing-section">
+    <section id="landing-section" style="height: 90vh;">
         <div class="container">
-            <div class="flexbox">
+            <div class="flexbox" style="justify-content: space-between">
                 <div class="block">
                     <h1 style="font-size: 6em;">Wilson San</h1>
                     <h2 style="text-transform: uppercase;">Développeur Web</h2>
@@ -31,28 +33,29 @@
                         adipisci natus facilis! Explicabo sint placeat eligendi quis cupiditate quas assumenda at est
                         dolorem,
                         unde eos in repellendus aliquam ipsum perspiciatis!</p>
-                    <div style="margin-top: 2em;">
+                    <div style="margin-top: 2em; justify-content: baseline;" class="flexbox">
                         <button style="text-transform: uppercase;">Mon CV</button>
-                        <button>LIN</button>
-                        <button>GIT</button>
+                        <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
+                        <button class="button-logo">GIT</button>
                     </div>
 
                 </div>
-                <div class="block ">
+                <div class="block left-block">
                     <img id='landing-img' src="/img/landing-img.jpg">
                 </div>
             </div>
-            <img src="#">
+            <a href="#mes-compétences-section"><img src="/img/arrow.png" id="arrow-down"></a>
         </div>
     </section>
-    <section id="mes-compétences-section">
+    <section id="mes-compétences-section" style="padding: 8em 0;">
         <div class="glass-container">
-            <div class="container">
-                <h1>Mes Compétences</h1>
-                <h1>Langages</h1>
-                <div class="row">
+            <h2 style="text-align: center;">Mes Compétences</h2>
+            <div class="row">
+                <h2>Langages</h2>
+                <div class="flexbox space-between">
                     <div class="card-perso">
                         <h2>HTML/CSS</h2>
+                        <span class="progression-gauge"></span>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
                             eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum
                             aliquid fuga commodi vitae veniam.</p>
@@ -60,6 +63,7 @@
                     </div>
                     <div class="card-perso">
                         <h2>Javascript</h2>
+                        <span class="progression-gauge"></span>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
                             eaque ullam dolorum
                             animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
@@ -68,6 +72,39 @@
                     </div>
                     <div class="card-perso">
                         <h2>PHP</h2>
+                        <span class="progression-gauge"></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                            eaque ullam dolorum
+                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
+                            vitae veniam.</p>
+                        <button> projets</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2>Frameworks</h2>
+                <div class="flexbox space-between">
+                    <div class="card-perso">
+                        <h2>Vue.JS</h2>
+                        <span class="progression-gauge"></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                            eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum
+                            aliquid fuga commodi vitae veniam.</p>
+                        <button> projets</button>
+                    </div>
+                    <div class="card-perso">
+                        <h2>Angular</h2>
+                        <span class="progression-gauge"></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                            eaque ullam dolorum
+                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
+                            vitae veniam.</p>
+                        <button> projets</button>
+                    </div>
+                    <div class="card-perso">
+                        <h2>Symfony</h2>
+                        <span class="progression-gauge"></span>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
                             eaque ullam dolorum
                             animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
@@ -77,6 +114,37 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <section id="mes-projets-section">
+        <div class="container">
+            <h2 class="center">Mes projets</h2>
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="projet-block col s10">
+                        <p class="btn-projet">Atypik House</p>
+                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                    </div>
+                    <div class="projet-block col s10">
+                        <p class="btn-projet">Mad Paris</p>
+                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                    </div>
+                    <div class="projet-block col s10">
+                        <p class="btn-projet">Pokédex</p>
+                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                    </div>
+                    <div class="projet-block col s10">
+                        <p class="btn-projet">Appli-Météo</p>
+                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <img src="/img/landing-img.jpg" id="preview-img">
+                </div>
+            </div>
+        </div>
+
     </section>
 </body>
 
