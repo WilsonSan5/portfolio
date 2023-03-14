@@ -12,8 +12,8 @@
 
 #preview-img {
     border-radius: 8px;
-    width: 100%;
-    height:100%;
+    width: 120%;
+    max-height: 500px;
     object-fit: cover;
 }
 
@@ -41,7 +41,7 @@
     }
 
     .projet-block p {
-        margin: 1em 0em;
+        margin: 0.2em 0em;
         background-color: white;
     }
 
@@ -49,9 +49,12 @@
         width: 100%;
         border-radius: 12px;
         display: block;
+        aspect-ratio: 16/10;
+        object-fit: cover;
     }
 
     #preview-img {
         display: none;
+        
     }
 }
