@@ -1,0 +1,26 @@
+.circle {
+    z-index: -1;
+    position: absolute;
+
+
+    display: flex;
+    content: '';
+    background-color: var(--red);
+
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+#circle-1 {
+    top: 850px;
+    left: -50px;
+    width: 50%;
+    max-width: 400px;
+}
+
+#circle-2 {
+    top: 1300px;
+    right: -80px;
+    width: 70%;
+    max-width: 500px;
+}

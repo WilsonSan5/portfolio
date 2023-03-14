@@ -1,6 +1,11 @@
 #mes-projets-section{
-    height: 90vh;
+    height: max-content;
 }
+
+#mes-projets-section .row{
+    margin-top: 6em;
+}
+
 .preview-mobile {
     display: none;
 }
@@ -22,6 +27,12 @@
     border-radius: 8px;
     background-color: grey;
     padding: 1.2em 2em;
+
+    cursor: pointer;
+}
+
+.projet-block p:hover{
+    background-color: white;
 }
 
 @media screen and (max-width:990px) {
@@ -31,6 +42,7 @@
 
     .projet-block p {
         margin: 1em 0em;
+        background-color: white;
     }
 
     .preview-mobile {

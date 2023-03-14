@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600&display=swap');
-
+:root{
+    --red: rgb(121, 0, 0);
+}
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Poppins', sans-serif;
+
 }
 
 body {
     background-color: black;
+    overflow-x: hidden;
 }
+
 
 p,
 a {
@@ -21,7 +26,7 @@ section {
     position: relative;
     width: auto;
     height: max-content;
-    background-color: black;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,10 +88,34 @@ h2 {
 /* ----------------------------------------- */
 
 
+#name{
+    display: inline-block;
+    font-size: 64px!important;
+   
+    
+}
+.back-line{
+    position: relative;
+
+    display: inline-block;
+    height: 20px;
+}
+.back-line::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: -40px;
+    background-color: rgb(187, 0, 0);
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+}
+
+
 /* --------------- BOUTTONS ------------- */
 
 button {
-    margin: 0em 0.5em;
+    margin-right: 1.5em;
     height: 100%;
     color: white;
     border: 2px solid white;
@@ -132,7 +161,15 @@ button {
     min-width: 380px;
     padding: 3% clamp(1em, 7%, 5em);
     border-radius: 12px;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
+
+    /* Glass morphism */
+    background: rgba(123, 123, 123, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(126, 28, 28, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .glass-container .row {
@@ -158,11 +195,11 @@ button {
     }
 
     #landing-img {
-        display: none;
+        
     }
 
     .left-block {
-        display: none;
+      
     }
 
     .block {

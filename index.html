@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/projets.css">
+    <link rel="stylesheet" href="css/background.css">
     <title>Wilson San</title>
 </head>
 
@@ -26,17 +27,17 @@
         <div class="container">
             <div class="flexbox" style="justify-content: space-between">
                 <div class="block">
-                    <h1 style="font-size: 6em;">Wilson San</h1>
+                    <h1 style="font-size: 6em;" id="name"><span class="back-line">Wilson San</span></h1>
                     <h2 style="text-transform: uppercase;">Développeur Web</h2>
                     <p style="text-transform: uppercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Nobis
                         adipisci natus facilis! Explicabo sint placeat eligendi quis cupiditate quas assumenda at est
                         dolorem,
                         unde eos in repellendus aliquam ipsum perspiciatis!</p>
-                    <div style="margin-top: 2em; justify-content: baseline;" class="flexbox">
+                    <div style="margin-top: 2em; ;display: flex; align-items: center;">
                         <button style="text-transform: uppercase;">Mon CV</button>
                         <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
-                        <button class="button-logo">GIT</button>
+                        <button class="button-logo"><img src="/img/github.png"></button>
                     </div>
 
                 </div>
@@ -144,8 +145,9 @@
                 </div>
             </div>
         </div>
-
     </section>
+    <span id="circle-1" class="circle"></span>
+    <span id="circle-2" class="circle"></span>
 </body>
 
 </html>
