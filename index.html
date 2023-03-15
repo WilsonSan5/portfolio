@@ -17,145 +17,170 @@
 <body>
     <div class="header">
         <h2 class="logo">WS</h2>
+        <img src="/img/burger.png" id="burger">
         <div class="navbar">
             <a href="#mes-compétences-section">Qui suis-je ?</a>
-            <a href="#">Mes projets</a>
+            <a href="#mes-projets-section">Mes projets</a>
             <a href="#">Contact</a>
         </div>
     </div>
-    <section id="landing-section" style="height: 90vh;">
-        <div class="container">
-            <div class="row" style="justify-content: space-between">
-                <div class="col s12 l6">
-                    <h1 style="font-size: 6em;" id="name"><span class="back-line">Wilson San</span></h1>
-                    <h2 style="font-weight: 600!important;">Développeur Web</h2>
-                    <p style="text-transform: uppercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Nobis
-                        adipisci natus facilis! Explicabo sint placeat eligendi quis cupiditate quas assumenda at est
-                        dolorem,
-                        unde eos in repellendus aliquam ipsum perspiciatis!</p>
-                    <div class='' style="margin: 2em 0em; ;display: flex; align-items: center;">
-                        <button style="text-transform: uppercase;">Mon CV</button>
-                        <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
-                        <button class="button-logo"><img src="/img/github.png"></button>
-                    </div>
-                </div>
-                <div class="col s12 l6">
-                    <img id='landing-img' src="/img/landing-img.jpg">
+
+    <div id="scrollmenu" class="show-menu glass-morphism">
+        <img src="/img/cross.png" id="croix">
+        <a onclick="toggleMenu()" href="#mes-compétences-section">Qui suis-je ?</a>
+        <a  onclick="toggleMenu()" href="#mes-projets-section">Mes projets</a>
+        <a  onclick="toggleMenu()" href="#">Contact</a>
+    </div>
+
+
+    <section id="landing-section" class="container">
+        <div class="row" style="justify-content: space-between">
+            <div class="col s12 l6">
+                <h1 style="font-size: 6em;" id="name"><span class="back-line">Wilson San</span></h1>
+                <h2 style="font-weight: 600!important;">Développeur Web</h2>
+                <p style="text-transform: uppercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nobis
+                    adipisci natus facilis! Explicabo sint placeat eligendi quis cupiditate quas assumenda at est
+                    dolorem,
+                    unde eos in repellendus aliquam ipsum perspiciatis!</p>
+                <div class='' style="margin: 2em 0em; ;display: flex; align-items: center;">
+                    <button style="text-transform: uppercase;">Mon CV</button>
+                    <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
+                    <button class="button-logo"><img src="/img/github.png"></button>
                 </div>
             </div>
-
-            <a href="#mes-compétences-section"><img src="/img/arrow.png" id="arrow-down"></a>
+            <div class="col s12 l6">
+                <img id='landing-img' src="/img/landing-img.jpg">
+            </div>
         </div>
 
+        <a href="#mes-compétences-section"><img src="/img/arrow.png" id="arrow-down"></a>
+
+
     </section>
-    <section id="mes-compétences-section" style="padding: 8em 0;" class="container">
-        <div class="glass-container">
+    <section id="mes-compétences-section" class="">
+        <div class="glass-container glass-morphism">
             <h2 style="text-align: center;">Mes Compétences</h2>
             <div class="row">
-                <h2>Langages</h2>
-                <div class="flexbox space-between">
-                    <div class="card-perso">
-                        <h2>HTML/CSS</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum
-                            aliquid fuga commodi vitae veniam.</p>
-                        <button> projets</button>
-                    </div>
-                    <div class="card-perso">
-                        <h2>Javascript</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum
-                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
-                            vitae veniam.</p>
-                        <button> projets</button>
-                    </div>
-                    <div class="card-perso">
-                        <h2>PHP</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum
-                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
-                            vitae veniam.</p>
-                        <button> projets</button>
+                <div id='Langages'>
+                    <h2>Langages</h2>
+                </div>
+                <div class="scroll-box">
+                    <div class="flexbox space-between cards-row">
+                        <div class="card-perso">
+                            <h2 id="html">HTML/CSS</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat,
+                                laborum
+                                aliquid fuga commodi vitae veniam.</p>
+                            <button> projets</button>
+                        </div>
+                        <div class="card-perso">
+                            <h2 id="javascript">Javascript</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum
+                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
+                                commodi
+                                vitae veniam.</p>
+                            <button> projets</button>
+                        </div>
+                        <div class="card-perso">
+                            <h2 id="PHP">PHP</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum
+                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
+                                commodi
+                                vitae veniam.</p>
+                            <button> projets</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="row">
-                <h2>Frameworks</h2>
-                <div class="flexbox space-between">
-                    <div class="card-perso">
-                        <h2>Vue.JS</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum
-                            aliquid fuga commodi vitae veniam.</p>
-                        <button> projets</button>
-                    </div>
-                    <div class="card-perso">
-                        <h2>Angular</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum
-                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
-                            vitae veniam.</p>
-                        <button> projets</button>
-                    </div>
-                    <div class="card-perso">
-                        <h2>Symfony</h2>
-                        <span class="progression-gauge"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                            eaque ullam dolorum
-                            animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga commodi
-                            vitae veniam.</p>
-                        <button> projets</button>
+                <div class="" id='Frameworks'>
+                    <h2>Frameworks</h2>
+                </div>
+                <div class="scroll-box">
+                    <div class="flexbox space-between cards-row">
+                        <div class="card-perso">
+                            <h2 id="vuejs">Vue.JS</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat,
+                                laborum
+                                aliquid fuga commodi vitae veniam.</p>
+                            <button> projets</button>
+                        </div>
+                        <div class="card-perso">
+                            <h2 id="angular">Angular</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum</p>
+                            <button> projets</button>
+                        </div>
+                        <div class="card-perso">
+                            <h2 id="symfony">Symfony</h2>
+                            <span class="progression-gauge"></span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
+                                eaque ullam dolorum
+                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
+                                commodi
+                                vitae veniam.</p>
+                            <button> projets</button>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
         </div>
     </section>
 
     <section id="mes-projets-section">
-        <div class="container">
-            <h2 class="center">Mes projets</h2>
-            <div class="row">
-                <div class="col s12 l6">
-                    <div class="projet-block col s12 l10">
-                        <p class="btn-projet">Atypik House</p>
-                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                    </div>
-                    <div class="projet-block col s12 l10">
-                        <p class="btn-projet">Mad Paris</p>
-                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                    </div>
-                    <div class="projet-block col s12 l10 ">
-                        <p class="btn-projet">Pokédex</p>
-                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                    </div>
-                    <div class="projet-block col s12 l10">
-                        <p class="btn-projet">Appli-Météo</p>
-                        <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                    </div>
+        <h2 class="center">Mes projets</h2>
+        <div class="row scroll-box">
+            <div class="col s12 l5" id="projets-row">
+                <!-- <div class="projet-block col s12 l10">
+                    <p class="btn-projet">Atypik House</p>
+                    <img class='preview-mobile' src="img/Atypik_house.jpg"></img>
                 </div>
-                <div class="col s6 l6">
-                    <img src="/img/landing-img.jpg" id="preview-img">
+                <div class="projet-block col s12 l10">
+                    <p class="btn-projet">Mad Paris</p>
+                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
                 </div>
+                <div class="projet-block col s12 l10 ">
+                    <p class="btn-projet">Pokédex</p>
+                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                </div>
+                <div class="projet-block col s12 l10">
+                    <p class="btn-projet">Appli-Météo</p>
+                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
+                </div> -->
+            </div>
+            <div class="col s6 l7" id="preview-box" style="overflow-x: hidden;">
+                <img src="/img/Atypik_house.jpg" id="preview-img">
             </div>
         </div>
+
     </section>
-    <div id="footer">
-            <div style="margin: 2em 0em; ;display: flex; align-items: center;justify-content: center;">
-                <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
-                <button class="button-logo"><img src="/img/github.png"></button>
+    <div id="footer" class="glass-morphism">
+        <div style="margin: 2em 0em; ;display: flex; align-items: center;justify-content: center;">
+            <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
+            <button class="button-logo"><img src="/img/github.png"></button>
+
         </div>
         <h2 class="center">Wilson San</h2>
+
     </div>
+
     <span id="circle-1" class="circle"></span>
-    <span id="circle-2" class="circle"></span>
+    <!-- <span id="circle-2" class="circle"></span> -->
+    <span id="circle-3" class="circle"></span>
+    <script src="/js/main.js"></script>
+    <script src="/js/projets.js"></script>
 </body>
 
 </html>

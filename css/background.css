@@ -3,7 +3,7 @@
     position: absolute;
 
 
-    display: flex;
+    display: inline-flex;
     content: '';
     background-color: var(--red);
 
@@ -22,5 +22,13 @@
     top: 1300px;
     right: -80px;
     width: 70%;
+    max-width: 500px;
+}
+
+#circle-3 {
+    background-color: rgb(12, 255, 146);
+    bottom: 0px;
+    left: 0px;
+    width: 15%;
     max-width: 500px;
 }

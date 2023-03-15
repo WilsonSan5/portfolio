@@ -7,12 +7,18 @@
     font-size: 1.5em !important;
     font-weight: 700;
     margin: 0 !important;
+
+    background-size: 100% 10px;
+    background-position: bottom;
 }
 
-
+.cards-row {
+    gap: 10px;
+}
 
 .card-perso p {
-    margin-bottom: auto; /*  Pour pusher le boutotn en bas de la div */
+    margin-bottom: auto;
+    /*  Pour pusher le boutotn en bas de la div */
 }
 
 .card-perso {
@@ -23,12 +29,10 @@
     gap: clamp(10px, 8%, 25px);
     padding: 1.5em;
 
-    aspect-ratio: 1/1;
+    width: 380px;
     border-radius: 12px;
-    width: 32%;
-    height: 100%;
-    max-height: 390px;
-    max-width: max-content;
+
+
     background-color: white;
 }
 
@@ -52,13 +56,55 @@
 
 @media screen and (max-width:1000px) {
     .card-perso {
-        width: 48%;
-        min-width: 340px;
+        min-height: 340px;
+        min-width: 380px;
     }
 
     .card-perso button {
-        position: absolute;
         bottom: 1.5em;
     }
 
+    .glass-container {
+        width: 100%;
+    }
+
+    .cards-row {
+        justify-content: left;
+    }
+}
+
+#html {
+    background: linear-gradient(to bottom, rgb(255, 145, 77), rgb(255, 115, 0)) no-repeat 0 0;
+    background-size: 100% 10px;
+    background-position: bottom;
+}
+
+#javascript {
+    background: linear-gradient(to bottom, rgb(255, 230, 88), rgb(255, 231, 95)) no-repeat 0 0;
+    background-size: 100% 10px;
+    background-position: bottom;
+}
+
+#PHP {
+    background: linear-gradient(to bottom, rgb(119, 151, 255), rgb(126, 179, 253)) no-repeat 0 0;
+    background-size: 100% 8px;
+    background-position: bottom;
+}
+
+#vuejs {
+    background: linear-gradient(to bottom, rgb(63, 221, 124), rgb(84, 245, 146)) no-repeat 0 0;
+    background-size: 100% 10px;
+    background-position: bottom;
+}
+
+#angular {
+    background: linear-gradient(to bottom, rgb(255, 87, 87), rgb(255, 100, 100)) no-repeat 0 0;
+    background-size: 100% 10px;
+    background-position: bottom;
+}
+
+#symfony {
+    background: linear-gradient(to bottom, rgb(166, 166, 166), rgb(157, 157, 157)) no-repeat 0 0;
+    background-size: 100% 10px;
+    background-position: bottom;
 }
