@@ -1,0 +1,160 @@
+.card-perso> :is(p, h2) {
+    color: black;
+    text-align: center;
+}
+
+.card-perso h2 {
+    font-size: 1.5em !important;
+    font-weight: 700;
+    margin: 0 !important;
+    
+    background-size: 100% 10px!important;
+
+  
+}
+
+.cards-row {
+    gap: 10px;
+}
+
+.card-perso p {
+    margin-bottom: auto;
+    /*  Pour pusher le boutotn en bas de la div */
+}
+
+.card-perso {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5em;
+
+    width: 380px;
+    border-radius: 12px;
+
+
+    background-color: white;
+}
+
+.progression-gauge {
+    position: relative;
+    content: '';
+    background-color: rgb(177, 177, 177);
+    border-radius: 15px;
+    height: 20px;
+    width: 100%;
+}
+
+.progression-gauge::after {
+    content: '';
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    position: absolute;
+}
+
+.card-perso button {
+    font-size: 1em;
+    height: auto;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+
+    transition: 0.3s ease-out;
+}
+
+.card-perso button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+@media screen and (max-width:1000px) {
+    .card-perso {
+        min-height: 340px;
+        min-width: 380px;
+    }
+
+    .card-perso button {
+        bottom: 1.5em;
+    }
+
+    .glass-container {
+        width: 100%;
+    }
+
+    .cards-row {
+        justify-content: left;
+    }
+}
+
+#html {
+    background: linear-gradient(to bottom, rgb(255, 145, 77), rgb(255, 115, 0)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+
+#block-html .progression-gauge::after {
+    background-color: rgb(255, 145, 77);
+    width: 90%;
+}
+
+#block-html:hover {
+    box-shadow: 0px 0px 10px orange;
+}
+
+/* -------------------------------- */
+#javascript {
+    background: linear-gradient(to bottom, rgb(255, 230, 88), rgb(255, 231, 95)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+
+#block-javascript {
+    box-shadow: 0px 0px 10px rgb(255, 255, 34);
+}
+
+#block-javascript .progression-gauge::after {
+    background-color: rgb(255, 230, 88);
+    width: 60%;
+}
+
+#PHP {
+    background: linear-gradient(to bottom, rgb(156, 179, 255), rgb(157, 198, 255)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+
+#block-PHP .progression-gauge::after {
+    background-color: rgb(119, 151, 255);
+    width: 50%;
+}
+
+#vuejs {
+    background: linear-gradient(to bottom, rgb(63, 221, 124), rgb(84, 245, 146)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+
+#block-vuejs .progression-gauge::after {
+    background-color: rgb(63, 221, 124);
+    width: 70%;
+}
+
+#angular {
+    background: linear-gradient(to bottom, rgb(255, 106, 106), rgb(255, 124, 124)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+#block-angular .progression-gauge::after {
+    background-color: rgb(255, 87, 87);
+    width: 50%;
+}
+
+#symfony {
+    background: linear-gradient(to bottom, rgb(197, 197, 197), rgb(189, 189, 189)) no-repeat 0 0;
+    background-position: 0 12px;
+}
+#block-symfony .progression-gauge::after {
+    background-color: rgb(60, 60, 60);
+    width: 70%;
+}

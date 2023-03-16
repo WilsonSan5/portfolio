@@ -25,6 +25,12 @@
     max-width: 500px;
 }
 
+@media screen and (max-width:1000px) {
+    #circle-2{
+        right: 0px;
+    }
+}
+
 #circle-3 {
     background-color: rgb(12, 255, 146);
     bottom: 0px;

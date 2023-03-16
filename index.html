@@ -8,9 +8,10 @@
 
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/projets.css">
+    <link rel="stylesheet" href="css/mes-compétences.css">
+    <link rel="stylesheet" href="css/mes-projets.css">
     <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/contact.css">
     <title>Wilson San</title>
 </head>
 
@@ -19,7 +20,7 @@
         <h2 class="logo">WS</h2>
         <img src="/img/burger.png" id="burger">
         <div class="navbar">
-            <a href="#mes-compétences-section">Qui suis-je ?</a>
+            <a href="#mes-compétences-section">Mes compétences </a>
             <a href="#mes-projets-section">Mes projets</a>
             <a href="#">Contact</a>
         </div>
@@ -27,9 +28,9 @@
 
     <div id="scrollmenu" class="show-menu glass-morphism">
         <img src="/img/cross.png" id="croix">
-        <a onclick="toggleMenu()" href="#mes-compétences-section">Qui suis-je ?</a>
-        <a  onclick="toggleMenu()" href="#mes-projets-section">Mes projets</a>
-        <a  onclick="toggleMenu()" href="#">Contact</a>
+        <a onclick="toggleMenu()" href="#mes-compétences-section">Mes compétences</a>
+        <a onclick="toggleMenu()" href="#mes-projets-section">Mes projets</a>
+        <a onclick="toggleMenu()" href="#">Contact</a>
     </div>
 
 
@@ -38,11 +39,11 @@
             <div class="col s12 l6">
                 <h1 style="font-size: 6em;" id="name"><span class="back-line">Wilson San</span></h1>
                 <h2 style="font-weight: 600!important;">Développeur Web</h2>
-                <p style="text-transform: uppercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Nobis
-                    adipisci natus facilis! Explicabo sint placeat eligendi quis cupiditate quas assumenda at est
-                    dolorem,
-                    unde eos in repellendus aliquam ipsum perspiciatis!</p>
+                <p>
+                    J'ai commencé l'aventure du dévelopement web en janvier 2023, et&nbsp;quelle&nbsp;aventure&nbsp;!
+                    <br>Je suis toujours à la recherche de nouvelles expériences (stages,&nbsp;formations,&nbsp;projets)
+                    pour solidifer mes compétences.
+                </p>
                 <div class='' style="margin: 2em 0em; ;display: flex; align-items: center;">
                     <button style="text-transform: uppercase;">Mon CV</button>
                     <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
@@ -50,13 +51,10 @@
                 </div>
             </div>
             <div class="col s12 l6">
-                <img id='landing-img' src="/img/landing-img.jpg">
+                <img id='landing-img' src="/img/ino.png">
             </div>
         </div>
-
         <a href="#mes-compétences-section"><img src="/img/arrow.png" id="arrow-down"></a>
-
-
     </section>
     <section id="mes-compétences-section" class="">
         <div class="glass-container glass-morphism">
@@ -67,33 +65,35 @@
                 </div>
                 <div class="scroll-box">
                     <div class="flexbox space-between cards-row">
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-html">
                             <h2 id="html">HTML/CSS</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat,
-                                laborum
-                                aliquid fuga commodi vitae veniam.</p>
+                            <p>Je considère que j'ai un bon niveau en HTML/CSS. Avec ou sans frameworks je peux intégrer
+                                n'importe quelle site sans trop de difficulté. Je suis adèpte du mobile first qui est
+                                selon moi très important.<br>
+                                Ce portfolio est entièrement codé en HTML/CSS/JS from scratch avec Materialize et
+                                JQuery.
+                            </p>
                             <button> projets</button>
                         </div>
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-javascript">
                             <h2 id="javascript">Javascript</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum
-                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
-                                commodi
-                                vitae veniam.</p>
+                            <p>Javascript est un langage que j'adore pour sa versatilité. Je sais manipuler le DOM,
+                                faire des animations simples et faire des requêtes API.
+                                J'ai utilisé le javascript pour créer la section projets. (animation et création des
+                                éléments selon un tableau)
+                            </p>
                             <button> projets</button>
                         </div>
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-PHP">
                             <h2 id="PHP">PHP</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum
-                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
-                                commodi
-                                vitae veniam.</p>
+                            <p>
+                                Ce que j'adore avec PHP c'est sa facilité à communiquer avec une BDD. <br>
+                                Je sais créer un système complet d'authentification à un site. (Inscription dans la BDD,
+                                encryptage de mdp, modification des informations de l'utilisateur).
+                            </p>
                             <button> projets</button>
                         </div>
                     </div>
@@ -105,30 +105,33 @@
                 </div>
                 <div class="scroll-box">
                     <div class="flexbox space-between cards-row">
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-vuejs">
                             <h2 id="vuejs">Vue.JS</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat,
-                                laborum
-                                aliquid fuga commodi vitae veniam.</p>
+                            <p>J'aime VueJs pour sa prise simplicité et son efficacité.<br>
+                                je maitrsie la portée des variables avec VueX et l'appel de composant avec Vue Router.
+
+                            </p>
                             <button> projets</button>
                         </div>
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-angular">
                             <h2 id="angular">Angular</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum</p>
+                            <p>
+                                Maitrise des pipes
+
+                            </p>
                             <button> projets</button>
                         </div>
-                        <div class="card-perso">
+                        <div class="card-perso" id="block-symfony">
                             <h2 id="symfony">Symfony</h2>
                             <span class="progression-gauge"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias dignissimos enim iste
-                                eaque ullam dolorum
-                                animi ex perspiciatis autem veniam, aliquid reiciendis. Fugiat, laborum aliquid fuga
-                                commodi
-                                vitae veniam.</p>
+                            <p>Un framework back-end très complet.
+                                Je maitrise les commandes CLI : création d'entité, de controller, de CRUD, de relation
+                                entre les classes. <br>
+                                Je sais mettre en place un système d'inscription et d'authentification.<br>
+                                Je sais créer une instance de paiement avec Stripe.
+                            </p>
                             <button> projets</button>
                         </div>
                     </div>
@@ -142,42 +145,46 @@
     <section id="mes-projets-section">
         <h2 class="center">Mes projets</h2>
         <div class="row scroll-box">
-            <div class="col s12 l5" id="projets-row">
-                <!-- <div class="projet-block col s12 l10">
-                    <p class="btn-projet">Atypik House</p>
-                    <img class='preview-mobile' src="img/Atypik_house.jpg"></img>
-                </div>
-                <div class="projet-block col s12 l10">
-                    <p class="btn-projet">Mad Paris</p>
-                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                </div>
-                <div class="projet-block col s12 l10 ">
-                    <p class="btn-projet">Pokédex</p>
-                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                </div>
-                <div class="projet-block col s12 l10">
-                    <p class="btn-projet">Appli-Météo</p>
-                    <img class='preview-mobile' src="img/landing-img.jpg"></img>
-                </div> -->
+            <div class="col offset-l5 l7" id="techno-box">
+                <p id="date"> 03/03/2023 </p>
+
+                <p class="" id="techno"></p>
             </div>
+            <div class="col s12 l5" id="projets-row"></div>
             <div class="col s6 l7" id="preview-box" style="overflow-x: hidden;">
                 <img src="/img/Atypik_house.jpg" id="preview-img">
             </div>
         </div>
-
     </section>
+
+    <section>
+        <div class="container">
+            <h2 class="center">Contact</h2>
+            <div class="row">
+                <form action="" class="col s12 offset-l2 l8">
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="message-box">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email"  id="message-box">
+                    <label for="message">Message</label>
+                    <input type="text" name="message" id="message-box">
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
     <div id="footer" class="glass-morphism">
         <div style="margin: 2em 0em; ;display: flex; align-items: center;justify-content: center;">
             <button class="button-logo"><img src="/img/linked-in-logo.png" style="width: 25px;"></button>
             <button class="button-logo"><img src="/img/github.png"></button>
-
         </div>
         <h2 class="center">Wilson San</h2>
-
     </div>
 
     <span id="circle-1" class="circle"></span>
-    <!-- <span id="circle-2" class="circle"></span> -->
+    <span id="circle-2" class="circle"></span>
     <span id="circle-3" class="circle"></span>
     <script src="/js/main.js"></script>
     <script src="/js/projets.js"></script>

@@ -34,9 +34,13 @@ function responsive() {
 function toggleMenu() {
     if (scrollMenuIsActive) {
         scrollmenu.style.transform = 'translateX(100%)'
+        setTimeout(() => { scrollmenu.style.display = 'none' },300)
         scrollMenuIsActive = false
     } else {
-        scrollmenu.style.transform = 'translateX(0%)'
+        scrollmenu.style.display = 'flex'
+        setTimeout(() => {
+            scrollmenu.style.transform = 'translateX(0%)'
+        }, 1)
         scrollMenuIsActive = true
     }
 }
