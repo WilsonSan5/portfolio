@@ -15,7 +15,7 @@
 
 body {
     position: relative;
-    background-color: black;
+    background-color: rgb(4, 4, 4);
     overflow-x: hidden !important;
     max-width: 100%;
 
@@ -99,7 +99,7 @@ h2 {
     top: 0px;
     position: fixed;
     width: 100%;
-    background-color: black;
+    background-color: rgb(4, 4, 4);
     height: 8vh;
     padding: 0em 4%;
     display: flex;
@@ -116,7 +116,7 @@ h2 {
 
 .navbar a:hover {
     background: linear-gradient(to bottom, var(--red), var(--red)) no-repeat 0 0;
-    background-size: 100% 8px;
+    background-size: 100% 25px;
     background-position: 0 12px;
 
     animation: 0.3s backgroundgrowFromLeft;
@@ -150,18 +150,25 @@ h2 {
 #name {
     display: inline-block;
     font-size: 64px !important;
+
+    background: linear-gradient(to bottom, var(--red), var(--red)) no-repeat 0 0;
+    background-size: 0% 25px;
+    background-position: 0 35px;
+
+
+    animation: 0.3s 1s  backgroundgrowFromLeft normal forwards;
 }
 
-.back-line {
+/* .back-line {
     position: relative;
 
     display: inline-block;
     height: 20px;
-}
+} */
 
 
 
-.back-line::before {
+/* .back-line::before {
     content: '';
     z-index: -1;
     position: absolute;
@@ -172,7 +179,7 @@ h2 {
     width: 100%;
 
     animation: 1s ease-out 0s 1 growFromLeft;
-}
+} */
 
 
 /* --------------- BOUTTONS ------------- */
@@ -208,7 +215,7 @@ button:hover {
 #landing-img {
     border-radius: 10px;
     width: 100%;
-    max-height: 350px;
+    /* max-height: 350px; */
     object-fit: cover;
 }
 
@@ -333,11 +340,11 @@ button:hover {
 
 @keyframes backgroundgrowFromLeft {
     0% {
-        background-size: 0% 8px;
+        background-size: 0% 25px;
     }
 
     100% {
-        background-size: 100% 8px;
+        background-size: 100% 25px;
     }
 }
 

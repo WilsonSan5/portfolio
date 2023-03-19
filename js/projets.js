@@ -1,19 +1,17 @@
-
-
 mes_projets = [
-    ['Atypik House', 'img/Atypik_house.jpg', ['Symfony','PHP']], // Structure : Nom du Projet, lien de l'image, techno et langages
-    ['Mad Paris', '/img/Mad_Paris.png.jpg', ['HTML/CSS','Javascript']],
-    ['Pokédex', 'img/pokedex.jpg', ['Angular','Javascript']],
-    ['Appli météo', '/img/appli-meteo.jpg', ['VueJs','Javascript']],
+    ['Atypik House', 'img/Atypik_house.jpg', ['Symfony'], 'Mars, 2023'], // Structure : Nom du Projet, lien de l'image, techno et langages
+    ['Mad Paris', '/img/Mad_Paris.png.jpg', ['HTML/CSS', 'Javascript'], 'Mars, 2023'],
+    ['Site Portfolio', '/img/site-portfolio.jpg', ['HTML/CSS', 'Javascript'], 'Mars, 2023'],
+    ['Pokédex', 'img/pokedex.jpg', ['Angular'], 'Mars, 2023'],
+    ['Appli météo', '/img/appli-meteo.jpg', ['VueJs', 'Javascript'], 'Février, 2023'],
 ]
 
 projets_row = document.getElementById('projets-row')
-
 previewPicture = document.getElementById('preview-img')
 previewBox = document.getElementById('preview-box')
 technoBox = document.getElementById('techno-box')
 
-createTechnoBalises(0)
+createTechnoBalises(0, technoBox)
 
 currentPictureId = '0'
 
@@ -21,28 +19,31 @@ for (i in mes_projets) {
     projetBlock = document.createElement('div')
     title = document.createElement('p')
     image = document.createElement('img')
+    techno = document.createElement('p')
+    rowBalises = document.createElement('div')
+    date = document.createElement('p')
 
-    projetBlock.classList.add('projet-block');
-    projetBlock.classList.add('col')
-    projetBlock.classList.add('s12')
-    projetBlock.classList.add('l10')
-
-
+    projetBlock.setAttribute('class', 'projet-block col s12 l10')
+    rowBalises.setAttribute('class', 'flexbox row-balises')
     title.classList.add('btn-project')
     image.classList.add('preview-mobile')
+
+    rowBalises.appendChild(date)
+
+    createTechnoBalisesMobile(i, rowBalises)
 
     projetBlock.setAttribute('id', i)
     projetBlock.setAttribute('onmouseover', 'changePreview(this.id)')
     title.innerHTML = mes_projets[i][0]
     image.src = mes_projets[i][1]
-
-
+    date.innerHTML = mes_projets[i][3]
+    date.style.marginRight = 'auto'
 
     projetBlock.appendChild(title)
     projetBlock.appendChild(image)
+    projetBlock.appendChild(rowBalises)
 
     projets_row.appendChild(projetBlock)
-
 }
 
 function changePreview(projet_id) {
@@ -52,13 +53,9 @@ function changePreview(projet_id) {
     if (currentPictureId != projet_id) {
 
         // Création des balises affichant les technos
-        var technos = document.getElementsByClassName('techno');
-        while (technos[0]) {
-            technos[0].parentNode.removeChild(technos[0]);
-        }
 
-        createTechnoBalises(projet_id)
-
+        informationContainer.remove()
+        createTechnoBalises(projet_id, technoBox)
 
         // Je supprime l'image et je l'a recrée pour activer l'animation css (pas très propre lol)
         previewPicture.remove()
@@ -75,16 +72,41 @@ function changePreview(projet_id) {
     }
 }
 
-function createTechnoBalises(projet_id) { // création d'une fonction pour créer les balises en fonctions de l'ID du projet 
+function createTechnoBalises(projet_id, div) { // création d'une fonction pour créer les balises en fonctions de l'ID du projet 
+    informationContainer = document.createElement('div')
+    informationContainer.setAttribute('id', 'informationContainer')
+    informationContainer.setAttribute('class', 'flexbox')
+
+    date = document.createElement('p')
+    date.innerHTML = mes_projets[projet_id][3]
+    date.style.marginRight = 'auto'
+    informationContainer.appendChild(date)
+
+    for (t in mes_projets[projet_id][2]) {
+        techno = document.createElement('p')
+        techno.innerHTML = mes_projets[projet_id][2][t]
+
+        techno.setAttribute('class', getTechnoColor(mes_projets[projet_id][2][t]))
+        techno.classList.add('techno')
+        techno.classList.add('desktop')
+
+        informationContainer.appendChild(techno)
+    }
+
+    div.appendChild(informationContainer)
+}
+
+function createTechnoBalisesMobile(projet_id, div) { // création d'une fonction pour créer les balises en fonctions de l'ID du projet 
     for (t in mes_projets[projet_id][2]) {
         techno = document.createElement('p')
 
         techno.innerHTML = mes_projets[projet_id][2][t]
-        
+
         techno.setAttribute('class', getTechnoColor(mes_projets[projet_id][2][t]))
         techno.classList.add('techno')
+        techno.classList.add('mobile')
 
-        technoBox.appendChild(techno)
+        div.appendChild(techno)
     }
 }
 
@@ -92,15 +114,15 @@ function getTechnoColor(techno) {
     console.log(techno)
     switch (techno) {
         case 'VueJs':
-            return 'teal'
+            return '#00e676 green accent-3'
         case 'Angular':
             return 'red'
         case 'Symfony':
             return 'grey'
         case 'HTML/CSS':
-            return 'orange'
+            return 'blue'
         case 'PHP':
-            return 'light-blue'
+            return '#3949ab indigo darken-1'
         case 'Javascript':
             return '#ffd600 yellow accent-4'
     }

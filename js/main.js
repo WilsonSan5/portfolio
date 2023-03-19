@@ -13,7 +13,7 @@ scrollMenuIsActive = false
 
 function responsive() {
 
-    // PLUS GRAND QUI 1000 PX
+    // PLUS GRAND QUE 1000 PX
     if (window.matchMedia("(min-width: 1000px)").matches) {
         console.log('add container') // If media query matches
         competencesSection.classList.add('container')
@@ -22,7 +22,7 @@ function responsive() {
         frameworksContainer.classList.remove('container')
         scrollmenu.style.transform = 'translateX(100%)'
 
-        // PLUS PETIT QUI 1000 PX
+        // PLUS PETIT QUE 1000 PX
     } else {
         competencesSection.classList.remove('container')
         mesProjetsSection.classList.remove('container')

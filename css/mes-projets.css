@@ -1,5 +1,5 @@
 .preview-mobile {
-    display: none;    
+    display: none;
 }
 
 #preview-img {
@@ -14,13 +14,12 @@
     transition: 1s;
 }
 
-
-.projet-block p {
-    margin-bottom: 1em ;
+.btn-project {
+    margin-bottom: 1em;
 
     color: black;
     font-weight: 700;
-    font-size: 1.2em ;
+    font-size: 1.2em;
 
     border-radius: 8px;
     background-color: grey;
@@ -29,19 +28,22 @@
     cursor: pointer;
 }
 
-.projet-block p:hover{
+.btn-project:hover {
     background-color: white;
 }
 
-#techno-box{
-    display: flex;
-    justify-content: end;
-    text-align: end;
+
+.techno {
+    font-weight: 600!important;
+    color:rgb(13, 13, 13)!important;
+    width: min-content;
+    margin: .5em .2em!important;
+    padding: 0.2em 1em!important;
+    border-radius: 20px!important;
 }
-.techno{
-    margin: .5em .2em;
-    padding: 0.2em 1em;
-    border-radius: 20px;
+
+#informationContainer{
+    align-items: center;
 }
 
 
@@ -61,11 +63,11 @@
 @media screen and (max-width:990px) {
     .projet-block {
         margin: 1em 0em;
-        width: 100vw!important;
-       
+        width: 100vw !important;
+
     }
 
-    .projet-block p {
+    .btn-project {
         padding: 0.5em 2em;
         margin: 0.5em 0em;
         background-color: white;
@@ -83,15 +85,23 @@
         display: none;
     }
 
-    #projets-row{
+    #projets-row {
         display: flex;
         width: max-content;
+    }  
+      #techno-box{
+        display: none;
     }
 }
 
 @media screen and (min-width:1000px) {
-    #mes-projets-section h2{
-        margin-bottom: 4em!important;
+    #mes-projets-section h2 {
+        margin-bottom: 4em !important;
     }
-
+    .mobile{
+        display: none;
+    }
+    .row-balises{
+        display: none;
+    }
 }
