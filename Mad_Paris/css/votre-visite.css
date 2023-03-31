@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+section {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+a {
+    color: #000;
+    font-size: clamp(0.8em, 1vw, 1em);
+}
+
+.visite-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visite-links p  {
+    cursor: pointer;
+    text-align: center;
+    font-size: clamp(1em, 2vw, 1.5em);
+}
+
+.active{
+    text-shadow: 1px 0px 0px black ;
+    letter-spacing: 0px;
+}
+
+.visite-links p:hover:not(.active) { /* Le hover est désactivé si p a la classe .active */
+    text-decoration: underline;
+}
+
+
+.vertical-line {
+    content: '';
+    background-color: black;
+    height: 30px;
+    width: 2px;
+    margin: 0em clamp(1.2em, 1.5vw, 2em)
+}
+
+#art-placeholder img {
+    margin: 2em 0em;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.bloc-texte {
+    margin: 1em 0em;
+    display: flex;
+
+}
+
+.horizontal-line {
+    margin-top: 0.7em;
+    margin-right: 1em;
+    margin-left: 0em;
+    content: '';
+    background-color: black;
+    width: 25px;
+    height: 1px;
+}
+
+#art-placeholder p {
+    color: black;
+    width: 90%;
+}
+
+
+
+#art-placeholder h2 {
+    font-size: clamp(1em, 2vw, 1.5em);
+    font-weight: 600;
+}
+
+/* -------------Bloc ALERT ---------------------- */
+.alert {
+    width: fit-content;
+    display: flex;
+    background-color: black;
+}
+.alert p{
+    color: white;
+}
+.alert-vertical-line {
+    content: '';
+    background-color: #f9f9f9;
+    margin-right: 1em;
+    width: 10px;
+}
+
+button {
+    width: 100%;
+    max-width: 400px;
+    padding: 1em 2em;
+    background-color: #000;
+    color: #f9f9f9;
+    border: 0;
+    border-radius: 5px;
+}
+
+button .arrow {
+    width: 15px
+}

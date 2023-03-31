@@ -1,0 +1,92 @@
+<nav class="fixed-top" id="navbar">
+    <div class="d-flex justify-content-between align-items-center col-12 px-0">
+        <div class=" ">
+            <a href="#">
+                <img id="burger" src="img/burger.png" onclick="scrollMenu()">
+            </a>
+            <a href="index.html" id="left-logo">
+                <img class="logo" src="img/logo_MAD.png">
+            </a>
+        </div>
+        <a href="index.html" id="center-logo">
+            <img class="logo" src="img/logo_MAD.png">
+        </a>
+        <div class="links-box container">
+            <a class="text-white" href="expositions.html">Expositions</a>
+            <a class="text-white" href="#">Billetterie</a>
+            <a class="text-white" href="#">E-Boutique</a>
+            <a class="text-white" href="#">Soutenez-nous</a>
+            <a class="text-white" href="votre-visite.html">Votre visite</a>
+            <a class="text-white" href="#">Actualités</a>
+            <a class="text-white" href="#">Activités</a>
+        </div>
+        <a href="#" class="">
+            <img id="search" src="img/search.png">
+        </a>
+    </div>
+</nav>
+<div class="unscrolled position-fixed pt-5" id="menu">
+    <img src="img/cross.png" id="croix" onclick="scrollMenu()">
+    <div class=" text-white">
+        <a class=" language">FR</a>
+        <span class=" mx-1">|</span>
+        <a class=" language">EN</a>
+    </div>
+    <div class="menu-box container ">
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="expositions.html">Expositions</a> <img src="img/arrow.png"></div>
+        <div class="row  px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">Billetterie</a> <img src="img/arrow.png"></div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">E-Boutique</a> <img src="img/arrow.png"></div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">Soutenez-nous</a> <img src="img/arrow.png"></div>
+        <div class="row  px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="votre-visite.html">Votre Visite</a> <img src="img/arrow.png"></div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">Actualités</a> <img src="img/arrow.png"></div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center">
+            <hr class="solid mx-auto" id="line">
+        </div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">Nos Etablissements</a> <img src="img/arrow.png"></div>
+        <div class="row px-4 py-2 d-flex justify-content-between align-items-center"><a class="text-white px-2"
+                href="#">A propos</a> <img src="img/arrow.png"></div>
+    </div>
+    <a href="index.html"><img style="margin-top: 30px;" src="img/logo_MAD.png" class="" id="menu-logo"></a>
+</div>
+
+<script>
+    let croix = document.getElementById('croix')
+    let burger = document.getElementById('burger')
+    let menu = document.getElementById('menu')
+
+    let navbar = document.getElementById('navbar')
+
+    let scrolled = false;
+
+
+    function scrollMenu() {
+        if (scrolled == false) {
+            menu.classList.add('nav-scrolled')
+            navbar.style.zIndex = -1
+            scrolled = true
+
+        } else {
+            menu.classList.remove('nav-scrolled')
+            navbar.style.zIndex = 1
+            scrolled = false
+        }
+    }
+
+    function myFunction() {
+        if (window.matchMedia("(max-width: 900px)").matches) { // If media query matches
+
+        } else {
+            menu.classList.remove('nav-scrolled')
+
+        }
+    }
+    myFunction() // Call listener function at run time
+    window.addEventListener('resize', myFunction) // Attach listener function on state changes
+</script>

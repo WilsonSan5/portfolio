@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+
+}
+
+h1 {
+  font-size: clamp(2em,4vw,2.5em);
+  font-weight: 700;
+}
+
+nav {
+  background-color: #0b0b0b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.links-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5em;
+}
+
+.links-box a {
+  font-size: 1rem;
+}
+
+
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+#search {
+  width: 35px;
+}
+
+.hidden {
+  display: none;
+}
+
+#line {
+  display: none;
+}
+
+/* Plus petit que 900px (téléphone) */
+@media screen and (max-width: 900px) {
+  .links-box {
+    display: none;
+  }
+
+  #left-logo {
+    display: none;
+  }
+
+  #line {
+    display: block;
+  }
+
+  .box-carousel {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .box-carousel::-webkit-scrollbar {
+    display: none;
+
+  }
+}
+
+/* Plus grand que 900px (Desktop) */
+@media screen and (min-width: 900px) {
+  #burger {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
+
+  #center-logo {
+    display: none;
+  }
+
+  .cards-lists {
+    overflow-x: visible;
+  }
+
+  .box-carousel {
+    overflow-x: auto;
+  }
+}
+
+/* Navabr scrolled */
+
+.unscrolled {
+  margin: 0;
+  transition: 0.3s;
+
+  top: 0;
+  left: -100vw;
+
+
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(11, 11, 11);
+  background-image: url(/img/side-menu-bg.png);
+}
+
+
+.menu-box a {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.menu-box {
+  height: 80%;
+}
+
+.menu-box div {
+  height: 10%;
+  padding: 0;
+}
+
+
+.nav-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Arrows */
+#menu img {
+  width: 30px;
+  padding: 1em 0em;
+}
+
+#menu-logo {
+  align-self: center;
+
+}
+
+#croix {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+}
+
+.language {
+  font-size: 1em;
+}
+
+#line {
+  content: '';
+  background-color: rgb(94, 94, 94);
+  height: 1px;
+  width: 80vw;
+}
+
+/* ----------------------------Fin Navbar --------------------------------*/
+
+
+
+
+/* ---------------------------Footer----------------------- */
+footer{
+  margin-top: 2em;
+  background: url("/img/side-menu-bg.png")
+}
+
+.btn_black {
+  background-color: #171717;
+  border-color: #4d4d4d;
+  color: #ffffff;
+  font-size: 1.0em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control {
+  background-color: #fff0 !important;
+}
+
+.btn_reseaux {
+  border-radius: 3.25rem;
+}
+
+.btn-outline-light {
+  font-size: 1.0em
+}
+
+.form-control:valid {
+  background-color: #0B0B0B !important;
+}
+
+footer form,
+footer input,
+footer label,
+footer p {
+  color: white ;
+}
+
+.text-black {
+  color: #0B0B0B !important;
+}
+
+.fa {
+  aspect-ratio: 1/1 !important;
+}
+
+.text_overlay {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 12;
+}
+
+
+/****** scrollbar ******/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/*
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
+  }
+  */
+

@@ -1,0 +1,55 @@
+h1{
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+a{
+    color: #000;
+    font-size: clamp(0.8em,1vw,1em);
+}
+.expositions-card{
+    margin : 2%;
+    margin-bottom: 2%;
+    max-width: 325px;
+    width: 46%;
+    
+    background-color: red;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.expositions-card p{ 
+    color: white;
+}
+
+.expositions-card:hover{
+    transform: scale(0.97, 0.97);
+}
+.expositions-card div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    align-self: flex-end;
+ 
+}
+.expositions-card img{
+    right: 2px;
+    position: relative;
+    width: 15px;
+    height: auto;
+}
+
+.expositions-card p{
+    margin: 0;
+    font-size: clamp(1em,2vw,1.3em); 
+    font-weight: 600;
+    line-height: clamp(20px,2vw,30px);
+}
+

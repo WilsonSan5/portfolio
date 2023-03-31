@@ -2,7 +2,7 @@
     display: none;
 }
 
-#preview-img {
+.preview-img {
     border-radius: 8px;
     width: 100%;
     max-height: 500px;
@@ -32,17 +32,20 @@
     background-color: white;
 }
 
-
-.techno {
-    font-weight: 600!important;
-    color:rgb(13, 13, 13)!important;
-    width: min-content;
-    margin: .5em .2em!important;
-    padding: 0.2em 1em!important;
-    border-radius: 20px!important;
+#preview-box{
+    cursor: pointer;
 }
 
-#informationContainer{
+.techno {
+    font-weight: 600 !important;
+    color: rgb(13, 13, 13) !important;
+    width: min-content;
+    margin: .5em .2em !important;
+    padding: 0.2em 1em !important;
+    border-radius: 20px !important;
+}
+
+#informationContainer {
     align-items: center;
 }
 
@@ -63,8 +66,8 @@
 @media screen and (max-width:990px) {
     .projet-block {
         margin: 1em 0em;
-        width: 100vw !important;
-
+        min-width: 100vw;
+        scroll-snap-align: center;
     }
 
     .btn-project {
@@ -81,15 +84,17 @@
         object-fit: cover;
     }
 
-    #preview-img {
+    .preview-img {
         display: none;
     }
 
     #projets-row {
         display: flex;
-        width: max-content;
-    }  
-      #techno-box{
+        scroll-snap-type: x mandatory;
+        overflow: auto;
+    }
+
+    #techno-box {
         display: none;
     }
 }
@@ -98,10 +103,12 @@
     #mes-projets-section h2 {
         margin-bottom: 4em !important;
     }
-    .mobile{
+
+    .mobile {
         display: none;
     }
-    .row-balises{
+
+    .row-balises {
         display: none;
     }
 }

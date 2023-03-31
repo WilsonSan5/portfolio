@@ -34,13 +34,15 @@ function responsive() {
 function toggleMenu() {
     if (scrollMenuIsActive) {
         scrollmenu.style.transform = 'translateX(100%)'
-        setTimeout(() => { scrollmenu.style.display = 'none' },300)
+        setTimeout(() => { scrollmenu.style.display = 'none' }, 300)
+        document.body.classList.toggle('lock-scroll');
         scrollMenuIsActive = false
     } else {
         scrollmenu.style.display = 'flex'
         setTimeout(() => {
             scrollmenu.style.transform = 'translateX(0%)'
         }, 1)
+        document.body.classList.toggle('lock-scroll');
         scrollMenuIsActive = true
     }
 }
@@ -55,4 +57,29 @@ burger.addEventListener('click', () => {
 croix.addEventListener('click', () => {
     toggleMenu()
 })
+
+// Buttons location
+
+document.getElementById("Github").onclick = function () {
+    window.open('https://github.com/WilsonSan5')
+}
+document.getElementById("LinkedIn").onclick = function () {
+    window.open("https://www.linkedin.com/in/wilson-san/")
+}
+document.getElementById("Github-footer").onclick = function () {
+    window.open("https://github.com/WilsonSan5")
+}
+document.getElementById("LinkedIn-footer").onclick = function () {
+    window.open("https://www.linkedin.com/in/wilson-san/")
+}
+
+document.getElementById("Btn-CV").onclick = function () {
+    window.open("/Wilson_San_CV_MARS_2023.pdf")
+}
+
+
+ // Projets redirection
+
+
+
 

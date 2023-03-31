@@ -1,19 +1,21 @@
 mes_projets = [
-    ['Atypik House', 'img/Atypik_house.jpg', ['Symfony'], 'Mars, 2023'], // Structure : Nom du Projet, lien de l'image, techno et langages
-    ['Mad Paris', '/img/Mad_Paris.png.jpg', ['HTML/CSS', 'Javascript'], 'Mars, 2023'],
-    ['Site Portfolio', '/img/site-portfolio.jpg', ['HTML/CSS', 'Javascript'], 'Mars, 2023'],
-    ['Pokédex', 'img/pokedex.jpg', ['Angular'], 'Mars, 2023'],
-    ['Appli météo', '/img/appli-meteo.jpg', ['VueJs', 'Javascript'], 'Février, 2023'],
+    ['Atypik House', 'img/Atypik_house.webp', ['Symfony'], 'Mars, 2023', 'https://github.com/WilsonSan5/Atypik_House'], // Structure : Nom du Projet, lien de l'image, techno et langages
+    ['Mad Paris', '/img/Mad_Paris.webp', ['HTML/CSS', 'Javascript'], 'Mars, 2023', '/Mad_Paris/index.html'],
+    ['Site Portfolio', '/img/site-portfolio.webp', ['HTML/CSS', 'Javascript'], 'Mars, 2023', '/index.html'],
+    ['Pokédex', 'img/pokedex.webp', ['Angular'], 'Mars, 2023', 'Pokédex/index.html'],
+    ['Appli météo', '/img/appli-meteo.webp', ['VueJs', 'Javascript'], 'Février, 2023', 'https://www.appmeteo.wilsonsan.fr/'],
 ]
 
 projets_row = document.getElementById('projets-row')
-previewPicture = document.getElementById('preview-img')
+previewPicture = document.getElementById('default-img')
 previewBox = document.getElementById('preview-box')
 technoBox = document.getElementById('techno-box')
+currentPictureId = 'default'
 
 createTechnoBalises(0, technoBox)
+changePreview(1) //Définit l'image par défaut
 
-currentPictureId = '0'
+
 
 for (i in mes_projets) {
     projetBlock = document.createElement('div')
@@ -39,6 +41,11 @@ for (i in mes_projets) {
     date.innerHTML = mes_projets[i][3]
     date.style.marginRight = 'auto'
 
+    //Lien
+
+    projetBlock.setAttribute('onclick', 'redirectToProject(this.id)')
+
+
     projetBlock.appendChild(title)
     projetBlock.appendChild(image)
     projetBlock.appendChild(rowBalises)
@@ -61,9 +68,13 @@ function changePreview(projet_id) {
         previewPicture.remove()
         previewPicture = document.createElement('img')
         previewBox.appendChild(previewPicture)
-        previewPicture.setAttribute('id', 'preview-img')
+        previewPicture.setAttribute('id', projet_id)
+        previewPicture.setAttribute('class', 'preview-img')
+
+
 
         previewPicture.src = mes_projets[projet_id][1]
+        previewPicture.setAttribute('onclick', 'redirectToProject(this.id)')
         previewPicture.style.animation = 'animation: 1s ease-in-out 0s 1 slideInFromLeft;'
 
         currentPictureId = projet_id
@@ -111,7 +122,6 @@ function createTechnoBalisesMobile(projet_id, div) { // création d'une fonction
 }
 
 function getTechnoColor(techno) {
-    console.log(techno)
     switch (techno) {
         case 'VueJs':
             return '#00e676 green accent-3'
@@ -128,6 +138,9 @@ function getTechnoColor(techno) {
     }
 }
 
+function redirectToProject(projet_id) {
+    window.open(mes_projets[projet_id[0]][4])
+}
 
 
 

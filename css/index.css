@@ -10,7 +10,6 @@
     padding: 0;
     /* border: 1px solid red; */
     font-family: 'Poppins', sans-serif;
-
 }
 
 body {
@@ -18,7 +17,6 @@ body {
     background-color: rgb(4, 4, 4);
     overflow-x: hidden !important;
     max-width: 100%;
-
 }
 
 
@@ -50,6 +48,11 @@ h2 {
     font-size: 2em !important;
 }
 
+.lock-scroll{
+    overflow: hidden;
+    position: fixed;
+}
+
 /* ---------------------HEADER ---------------------------------- */
 
 .logo {
@@ -59,6 +62,7 @@ h2 {
 
 #burger {
     display: none;
+    transform: scaleX(-1)
 }
 
 #scrollmenu {
@@ -71,13 +75,15 @@ h2 {
 
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 150px;
 
     transition: 0.3s ease-in-out;
 }
 
 #scrollmenu a {
+    margin: 1em 0em;
     font-size: 2em;
     text-transform: uppercase;
 }
@@ -112,6 +118,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 30%;
+    min-width: 400px;
 }
 
 .navbar a:hover {
@@ -138,6 +145,8 @@ h2 {
 /* ------------- MY FLEXBOX -------------- */
 .flexbox {
     display: flex;
+    scroll-snap-type: x mandatory;
+
 }
 
 .space-between {
@@ -156,7 +165,7 @@ h2 {
     background-position: 0 35px;
 
 
-    animation: 0.3s 1s  backgroundgrowFromLeft normal forwards;
+    animation: 0.3s 1s backgroundgrowFromLeft normal forwards;
 }
 
 /* .back-line {
@@ -313,13 +322,13 @@ button:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #dd090900;
     border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #45040400;
     border-radius: 10px;
 }
 

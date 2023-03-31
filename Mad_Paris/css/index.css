@@ -1,0 +1,70 @@
+#voir-plus {
+    margin: 0;
+    margin-top: 10px;
+}
+
+section h1 {
+    text-transform: uppercase;
+}
+
+body {
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+/* ----------------------------Video--------------------------------------- */
+
+#home-video {
+    width: 100vw;
+    height: 98vh;
+    min-height: 650px;
+    object-fit: cover;
+}
+
+/*---------------------------- Cards Style-------------------------------------------- */
+
+
+.card-perso {
+    margin: 30px auto;
+    width: 300px;
+    height: 400px;
+
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card-perso div {
+    align-self: flex-end;
+}
+
+.card-perso p {
+    margin: 0em;
+}
+
+.card-perso:hover {
+    transform: scale(0.97, 0.97);
+}
+
+.card-perso p{
+    color: white;
+}
+
+/*----------------------------FIN Cards Style-------------------------------------------- */
+
+.box-contain {
+    position: relative;
+}
+
+#titre-boutique {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    /* Permet de faire bouger l'image en haut à gauchhe pour que le point d'ancrage soit au milieu */
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+}
