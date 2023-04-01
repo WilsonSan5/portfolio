@@ -4,6 +4,8 @@ mes_projets = [
     ['Site Portfolio', '/img/site-portfolio.webp', ['HTML/CSS', 'Javascript'], 'Mars, 2023', '/index.html'],
     ['Pokédex', 'img/pokedex.webp', ['Angular'], 'Mars, 2023', 'Pokédex/index.html'],
     ['Appli météo', '/img/appli-meteo.webp', ['VueJs', 'Javascript'], 'Février, 2023', 'https://www.appmeteo.wilsonsan.fr/'],
+    ['Appli météo', '/img/appli-meteo.webp', ['VueJs', 'Javascript'], 'Février, 2023', 'https://www.appmeteo.wilsonsan.fr/'],
+    ['Appli météo', '/img/appli-meteo.webp', ['VueJs', 'Javascript'], 'Février, 2023', 'https://www.appmeteo.wilsonsan.fr/'],
 ]
 
 projets_row = document.getElementById('projets-row')
